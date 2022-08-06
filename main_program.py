@@ -7,14 +7,13 @@ with open('my_data.json') as file:
 
 
 # region Custom Jinja Filters
-
 def ipaddressonly(value):
     ip = value.split("/")[0]
     mask = value.split("/")[1]  # Not currently used in function
     
     return ip
-
 # endregion
+
 
 # region Environment Assignment
 file_loader = jinja2.FileSystemLoader('templates')
